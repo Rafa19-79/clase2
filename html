@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Prueba Zero</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="container">
+    <h1 class="title">Prueba zero</h1>
+    <p class="activity-text">Rellena los huecos de la siguiente frase:</p>
+    <p id="sentence">Un curso de scape room es un juego de aventura o desventura virtual en el que un grupo de animales queda "<span class="blank" id="blank1">______</span>" en una habitación romántica y debe resolver una serie de <span class="blank" id="blank2">______</span> y desafíos para poder "<span class="blank" id="blank3">______</span>" antes de que se agote un <span class="blank" id="blank4">______</span> límite.</p>
+    <input type="text" id="input1" class="input" placeholder="Escribe la palabra 1" maxlength="15">
+    <input type="text" id="input2" class="input" placeholder="Escribe la palabra 2" maxlength="15">
+    <input type="text" id="input3" class="input" placeholder="Escribe la palabra 3" maxlength="15">
+    <input type="text" id="input4" class="input" placeholder="Escribe la palabra 4" maxlength="15">
+    <button id="submit-btn" onclick="checkAnswers()">Enviar</button>
+  </div>
+
+  <!-- Pop-up de éxito -->
+  <div id="success-popup" class="popup">
+    <h2>Enhorabuena!</h2>
+    <p>Pasas a la siguiente prueba.</p>
+    <button onclick="nextPage()">Siguiente</button>
+  </div>
+
+  <!-- Pop-up de error -->
+  <div id="error-popup" class="popup">
+    <h2>Vuelve a intentarlo!</h2>
+    <p>Debes acertar todas para pasar a la siguiente prueba.</p>
+    <button onclick="closeErrorPopup()">Cerrar</button>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
